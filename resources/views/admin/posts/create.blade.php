@@ -4,21 +4,21 @@
     @include('admin.includes.errors')
 
     <div class="panel panel-default">
-        <div class="panel-heading">Create a new post</div>
+        <div class="panel-heading">Membuat Laporan Baru</div>
 
         <div class="panel-body">
             <form action="{{route('post.store', [])}}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
                 <div class="form-group">
-                    <label for="title">Title</label>
+                    <label for="title">Judul</label>
                     <input type="text" id="title" name="title" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="featured">Featured Image</label>
+                    <label for="featured">Foto Kerusakan</label>
                     <input type="file" id="featured" name="featured" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="category">Select a Category</label>
+                    <label for="category">Kategori Disabilitas</label>
                     <select name="category_id" id="category" class="form-control">
                         @foreach($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>

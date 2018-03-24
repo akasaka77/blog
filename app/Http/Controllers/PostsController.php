@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Tag;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Session;
 use App\Post;
@@ -61,7 +62,6 @@ class PostsController extends Controller
             'content_post' => 'required',
             'category_id' => 'required',
             'tags' => 'required',
-            'user_id' => 'required',
         ]);
 
         $featured = $request->featured;
